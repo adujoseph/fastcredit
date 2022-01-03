@@ -16,7 +16,6 @@ import {heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import HomeScreen from '../../screen/home/Home';
 import PaymentScreen from '../../screen/payment/Payment';
 import NotificationScreen from '../../screen/notification/Notification';
-import ScanScreen from '../../screen/scan/Scan';
 import ProfileScreen from '../../screen/profile/ProfileScreen';
 import DetailsScreen from '../../screen/productDetails/ProductDetails';
 //icons
@@ -156,18 +155,6 @@ const BottomTabBottom = () => {
   return (
     <Tabs.Navigator
       tabBar={props => <CustomTabBar {...props} />}
-      // screenOptions={({ route }) => ({
-      //   tabBarIcon: ({ focused, color, size }) => {
-      //     let iconName = "";
-
-      //     if (route.name === "dashboard") {
-      //       iconName = focused ? "box-open" : "box-open";
-      //     } else if (route.name === "order") {
-      //       iconName = focused ? "warehouse" : "warehouse";
-      //     }
-      //     return <Icon name={iconName} size={size} color={color} solid />;
-      //   },
-      // })}
       tabBarOptions={{
         activeTintColor: Colors.primary,
         inactiveTintColor: Colors.dark,
@@ -195,7 +182,6 @@ const BottomStack = () => {
       screenOptions={{
         headerTintColor: Colors.primary,
         headerTransparent: true,
-        // headerRight: () => <CustomMenuIcon color={Colors.white} />,
       }}>
       <Stack.Screen
         name={Details}
